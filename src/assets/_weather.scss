@@ -1,0 +1,140 @@
+@import 'variables';
+
+#flex{
+    display:flex;
+    justify-content: space-between;
+    align-items: start;
+    margin: 20px;
+    height: fit-content;
+    img{
+        display: block;
+        width: 200px;
+        margin: 10px 0;
+        @media (max-width:600px){
+            width: 120px;
+        }
+    }
+    button{
+        background: $primary;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        display: block;
+        margin: 10px 0;
+        border-radius: 5px;
+        font-size: 11px;
+        &:hover{
+        cursor : pointer;
+        background:rgb(25, 0, 255);
+        }
+        &:focus{
+        transform: scale(0.8);
+        background:rgb(4, 123, 153);
+        }
+    }
+}
+#location-info{
+    display:flex;
+    flex-direction: column;
+    align-items: end;
+    color: $secondary;
+    #city{
+        color: $primary;
+        opacity: 1;
+    }
+    #country{
+        font-weight: 400;
+        font-size:14px;
+    }
+}
+
+#weather{
+    margin-top: 100px;
+}
+.temperature{
+    background: $dark;
+    color: $primary;
+    height: 150px;
+    width: 300px;
+    margin: 5px auto;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: 600px){
+        width: 250px;
+    }
+    img{
+        position:absolute;
+        top: -55%;
+        left:-20%;
+        height: 150px;
+        width: 150px;
+    }
+    h1{
+        font-size: 50px;
+        span{
+            font-weight: 400;
+            font-size: 40px;
+            margin-left: 5px;
+        }
+    }
+}
+
+
+    
+    section{
+    color: $primary;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    height: fit-content;
+    margin: 20px auto;
+    padding: 20px 10px;
+    
+    .weather-info{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background: $dark;
+        height: 150px;
+        width: 96%;
+        margin: 5px;
+        border-radius: 10px;
+        div{
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            h1{
+                font-size: 30px;
+                font-weight: 700;
+            }
+            .weather-value{
+                font-size: 14px;
+                color: $tertiary;
+                font-weight: 500;
+            }
+            .weather-unit{
+                font-weight: 400;
+                font-size: 14px;
+                color: $primary;
+            }
+        }
+        .weather-icons{
+            display:block;
+            height: 50px;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px){
+    body{
+        width: 100%;
+    }
+    section{
+        grid-template-columns: 1fr;
+    }
+} 

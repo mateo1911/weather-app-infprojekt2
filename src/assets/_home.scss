@@ -1,0 +1,115 @@
+@import 'variables';
+#home{
+  height: 100vh;
+  overflow: hidden;
+}
+  #app-name{
+    color: #fff;
+    margin: 20px auto;
+    width: fit-content;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  #logo{
+    margin: 0 auto;
+    display:block;
+    margin-top: 25vh;
+  }
+  #user-info{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: fit-content;
+    margin-top: 100px;
+    div{
+      display:flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 10px;
+      min-width: 300px;
+      max-width: 420px;
+      height: 50px;
+      background:none;
+      border-radius: 5px;
+      label{
+        font-size: 14px;
+        font-weight: 700;
+        margin: 5px 10px;
+      }
+      input{
+        display: block;
+        color: rgb(11, 1, 104);
+        background: rgb(255, 255, 255);
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        padding: 5px 10px;
+        width: 96%;
+        height: 80%;
+        font-size: 16px;
+      }
+    }
+  }
+  
+  button{
+    color: #fff;
+    border: none;
+    background: rgb(67, 118, 247);
+    padding: 8px 40px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  h1{
+    color:#fff;
+  }
+
+  .no-result{
+    max-width: 400px;
+    margin:0 auto;
+    overflow:hidden;
+    position: relative;
+    img{
+      border-radius: 10px;
+      width: 400px;
+      display:block;
+      margin: 0 auto;
+      max-height: 400px;
+    }
+    h1,h2{
+      color: $common;
+      font-size: 14px;
+      color: $secondary;
+      font-weight: 500;
+      position: absolute;
+      background: rgb(36, 35, 35);
+      width: 200px;
+      left: 50%;
+      top: 15%;
+      padding: 5px;
+      text-align: center;
+      border-radius: 5px;
+      transform: translate(-50%, -50%);
+      transition: 2s;
+    }
+    h2{
+      top: 25%;
+      background:rgb(7, 2, 85);
+      a{
+        text-decoration: none;
+        color:#fff;
+        font-size: 11px;
+      }
+    }
+  }
+
+button:hover{
+    cursor : pointer;
+    background:rgb(25, 0, 255);
+  }
+  button:focus{
+    transform: scale(0.8);
+    background:rgb(4, 123, 153);
+  }
